@@ -24,10 +24,10 @@ function App() {
   }
 
 
-const renderCategories = () => {
-  return categories.map(c=>
-    <Category key ={c.id} id={c.id} title ={c.title} onCategoryClick={()=> handleCategoryClick(c.id)} />
-    );
+// const renderCategories = () => {
+//   return categories.map(c=>
+//     <Category key ={c.id} id={c.id} title ={c.title} onCategoryClick={()=> handleCategoryClick(c.id)} />
+//     );
    
   
 }
