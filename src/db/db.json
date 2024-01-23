@@ -1,0 +1,17 @@
+{
+    "categories": [
+        {"id":1,"title":"T-shirts"},
+        {"id":2,"title":"Crickets"},
+        {"id":3,"title":"Football"}
+
+    ],
+    "products":[
+        {"id":1,"catId":1, "title":"Nick T-shirts"},
+        {"id":2,"catId":1,"title":"SG T-shirts"},
+        {"id":3,"catId":2,"title":"SS Bat"},
+        {"id":4,"catId":2,"title":"SG Bat"},
+        {"id":5,"catId":3,"title":"Nike boots"},
+        {"id":6,"catId":3,"title":"Adidas boots"} 
+    ]
+    
+}
