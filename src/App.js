@@ -33,14 +33,13 @@ const renderCategories = () => {
 }
   const renderProducts=()=>{
     return products.map(p =>
-    <div>{p.title}-   </div>  )
+    <div>{p.title}  </div>  )
 
   }
   return (
     <>
     <center>
-      <header>My sports</header>
-    </center>
+      <header>My sports</header>   </center>
     <section>
       <nav>
       {
