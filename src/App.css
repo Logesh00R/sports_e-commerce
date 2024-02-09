@@ -8,48 +8,17 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-a {
-  color: darkslategray;
-  text-decoration: none;
-}
-
 
 header {
-  background-color: #7a77df;
+  background-color: #11d3c6;
   padding: 30px;
-  text-align:center;
-  font-size: 35px;
-  color: white;
-  display: grid;
-  grid-template-columns: 0.1fr 0.1fr 1fr 0.1fr;
-}
-
-header a {
-  color: rgb(106, 8, 8);
   text-align: center;
+  font-size: 50px;
+  color: white;
+  
+  
 }
 
-#search {
-  display: flex;
-}
-
-#search input {
-  margin-left: 10px;
-  height: 30px;
-  margin-top: 5px;
-}
-
-#headerHomeIcon {
-  justify-self: start;
-}
-
-#headerTitle {
-  justify-self: center;
-}
-
-#headerCartIcon {
-  justify-self: end;
-}
 
 
 section {
@@ -62,7 +31,7 @@ nav {
   -webkit-flex: 0.5;
   -ms-flex: 0.5;
   flex: 0.1;
-  background: #b7e66b;
+  background: #b0f54f;
   padding: 20px;
 }
 
@@ -82,12 +51,11 @@ nav ul li:hover {
 }
 
 main {
-  flex: 0.9;
+  
   padding-top: 20px;
-  min-height: 1600px;
+ 
 }
-
-
+ 
 footer {
   background-color: #d90c0c;
   padding: 10px;
@@ -95,9 +63,7 @@ footer {
   color: white;
 }
 
-footer a {
-  color: white;
-}
+
 
 @media (max-width: 600px) {
   section {

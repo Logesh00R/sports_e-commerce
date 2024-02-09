@@ -6,12 +6,116 @@
 
     ],
     "products":[
-        {"id":1,"catId":1, "title":"Nick T-shirts"},
-        {"id":2,"catId":1,"title":"SG T-shirts"},
-        {"id":3,"catId":2,"title":"SS Bat"},
-        {"id":4,"catId":2,"title":"SG Bat"},
-        {"id":5,"catId":3,"title":"Nike boots"},
-        {"id":6,"catId":3,"title":"Adidas boots"} 
+    {
+        "id":1,
+        "catId":1, 
+        "title":"Nike T-shirts",
+        "specification":{
+            "brand":"Nike",
+            "size" : "36-38",
+            "Material composition" : "75% Cotton,15% Nylon,10% Wool",
+            "Pattern" : "Solid",
+            "Fit type" :"Regular Fit",
+            "Neck style":"Dom",
+            "Country of Origin":"Vietnam"
+
+        },
+        "stocks" :"Limited Only",
+        "price":2000,
+        "image":"nike1.jpg"
+    
+    },
+    
+    {
+        "id":2,
+        "catId":1,
+        "title":"SG T-shirts",
+        "specification":{
+            "brand":"SG",
+            "size" : "36-38",
+            "Material Composition" : "75% Cotton,15% Nylon,10% Wool",
+            "Pattern" : "Solid",
+            "Fit type" :"Regular Fit",
+            "Neck style":"Dom",
+            "Country of Origin":"India"
+
+        },
+        "stocks" :"Limited Only",
+        "price":2500,
+        "image":"sg1.jpg"
+        
+    },
+    {
+        "id":3,
+        "catId":2,
+        "title":"SS Bat",
+        "specification":{
+            "Size" :"Size 3",
+            "Sport":"Cricket",
+            "Brand":"SS",
+            "Material":	"English Willow Wood",
+            "Colour":"Multi-Color"
+        },
+        "stocks" :"5 Only",
+        "price":7500,
+        "image":"ssbat1.jpg"
+    },
+    
+    {
+        "id":4,
+        "catId":2,
+        "title":"SG Bat",
+        "specification":{
+            "Size" :"Size 3",
+            "Sport":"Cricket",
+            "Brand":"SG",
+            "Material":	"English Willow Wood",
+            "Colour":"Multi-Color"
+
+        },
+        "stocks" :"6 Only",
+        "price":7000,
+        "image":"sgbat1.jng"
+    },
+    
+    {
+        "id":5,
+        "catId":3,
+        "title":"Nike boots",
+        "specification":{
+            "Material type":"Faux Leather, Rubber",
+            "Closure type":"Lace-Up",
+            "Heel type" :"No Heel",
+            "Water resistancelevel":"Water Resistant",
+            "Sole material":"Rubber",
+            "Style":"Football",
+            "Country of Origin":"India"
+
+
+        },
+        "stocks" :"3 Only",
+        "price":5000,
+        "image":"nikeboot2.jpg"
+    },
+    
+    {
+        "id":6,
+        "catId":3,
+        "title":"Adidas boots",
+        "specification":{
+            "Material type":"Faux Leather, Rubber",
+            "Closure type":"Lace-Up",
+            "Heel type" :"Heel",
+            "Water resistancelevel":"No Water Resistant",
+            "Sole material":"Rubber boot",
+            "Style":"Football",
+            "Country of Origin":"India"
+
+        },
+        "stocks" :"5 Only",
+        "price":6000,
+        "image":"adidas1.jpg"
+    } 
     ]
     
 }

@@ -1,52 +1,60 @@
 import React,{useState} from 'react';
 import './App.css';
 import Category from './components/Category';
+import { getCategories,getProducts } from './fetcher';
+import CategoryProducts from './components/CategoryProducts';
+
+
 function App() {
-  const[categories, setCategories] = useState([]);
-  const[products, setProducts] = useState([]);
+  const[categories, setCategories] = useState({errorMessage: '',data: []});
+  const[products, setProducts] = useState({errorMessage: '',data: []});
 
 
   React.useEffect(()=>{
-    fetch("http://localhost:3001/categories")
-    .then(response=>response.json())
-    .then(data=> {
-      console.log(data);
-      setCategories(data);
-    })
+    const fetchData = async () => {
+      const responseObject = await getCategories();
+      setCategories(responseObject);
+    }
+    fetchData();
   },[])
+
   const handleCategoryClick = id => {
-    fetch("http://localhost:3001/products?catId="+ id)
-    .then(response=>response.json())
-    .then(data=> {
-      console.log(data);
-      setProducts(data);
-    })
+    const fetchData = async () => {
+      const responseObject = await getProducts(id);
+      setProducts(responseObject);
+    }
+    fetchData();
+    
   }
 
 
 const renderCategories = () => {
-  return categories.map(c=>
+  return categories.data.map(c=>
     <Category key ={c.id} id={c.id} title ={c.title} onCategoryClick={()=> handleCategoryClick(c.id)} />
     );
    
   
 }
   const renderProducts=()=>{
-    return products.map(p =>
-    <div>{p.title}  </div>  )
-
+    return products.data.map(p =>
+    <CategoryProducts title={p.title} image = {p.image}/>
+    );
   }
   return (
     <>
-    <center>
-      <header>My sports</header>   </center>
+    
+
+    <header> My Sports </header>   
+    
     <section>
       <nav>
+       {categories.errorMessage && <div>Error : {categories.errorMessage}</div> } 
       {
-       categories && renderCategories()
+       categories.data && renderCategories()
       }
       </nav>
       <article>
+        {products.errorMessage && <div>Error : {products.errorMessage}</div> } 
         <h1>products</h1>
         {products && renderProducts()}
       </article>
@@ -55,12 +63,6 @@ const renderCategories = () => {
     <footer>
       footer
     </footer>
-
-
-
-
-
-
 
     
     </>
